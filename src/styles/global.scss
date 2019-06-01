@@ -1,0 +1,19 @@
+@import './reset';
+@import './colors';
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url('../assets/fonts/Metropolis-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  color: $c_white;
+  box-sizing: border-box;
+  font-family: Metropolis, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
