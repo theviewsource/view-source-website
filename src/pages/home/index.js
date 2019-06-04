@@ -7,15 +7,50 @@ import heart from '../../assets/images/heart.svg';
 
 import './style.scss';
 
+const JSONLD = () => (
+  <>
+    <script type="application/ld+json">
+      { JSON.stringify(
+        {
+          "@context": "http://schema.org",
+          "@type": "Company",
+          "legalName": "ViewSource",
+          "url": "https://viewsource.pl",
+          "logo": "https://viewsource.pl/icons/icon-512x512.png",
+          "sameAs": [
+            "https://www.facebook.com/the.view.source",
+            "https://twitter.com/theviewsource",
+            "https://www.instagram.com/view.source/"
+          ]
+        }
+      )}
+    </script>
+
+    <script type="application/ld+json">
+      { JSON.stringify(
+        {
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          "name": "ViewSource.pl",
+          "url": "https://viewsource.pl"
+        }
+      ) }
+    </script>
+  </>
+);
+
 const HomePage = () => (
-  <div className="Home">
-    <SEO title="View Source" />
-    <img src={ logoVertical} alt="View Source vertical logo"/>
-    <p className="Home__text">
-      Welcome to the ViewSource, we will be at your disposal shortly.
-      <img src={ heart} alt="Heart" className="Home__icon" />
-    </p>
-  </div>
+  <>
+    <div className="Home">
+      <SEO title="View Source" />
+      <img src={ logoVertical} alt="View Source vertical logo"/>
+      <p className="Home__text">
+        Welcome to the ViewSource, we will be at your disposal shortly.
+        <img src={ heart} alt="Heart" className="Home__icon" />
+      </p>
+    </div>
+    <JSONLD />
+  </>
 )
 
 export default HomePage
