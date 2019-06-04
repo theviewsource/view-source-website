@@ -10,7 +10,7 @@ import './style.scss';
 const JSONLD = () => (
   <>
     <script type="application/ld+json">
-      { `
+      {
         {
           "@context": "http://schema.org",
           "@type": "Organization",
@@ -23,18 +23,18 @@ const JSONLD = () => (
             "https://www.instagram.com/view.source/"
           ]
         }
-      ` }
+      }
     </script>
 
     <script type="application/ld+json">
-      { `
+      {
         {
           "@context": "http://schema.org",
           "@type": "WebSite",
           "name": "ViewSource.pl",
           "url": "https://viewsource.pl"
         }
-       ` }
+      }
     </script>
   </>
 );
