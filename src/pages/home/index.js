@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from 'react-helmet';
 
 import SEO from "../../components/seo"
 
@@ -8,9 +9,9 @@ import heart from '../../assets/images/heart.svg';
 import './style.scss';
 
 const JSONLD = () => (
-  <>
+  <Helmet>
     <script type="application/ld+json">
-      {
+      { `
         {
           "@context": "http://schema.org",
           "@type": "Organization",
@@ -23,20 +24,20 @@ const JSONLD = () => (
             "https://www.instagram.com/view.source/"
           ]
         }
-      }
+      ` }
     </script>
 
     <script type="application/ld+json">
-      {
+      { `
         {
           "@context": "http://schema.org",
           "@type": "WebSite",
           "name": "ViewSource.pl",
           "url": "https://viewsource.pl"
         }
-      }
+      ` }
     </script>
-  </>
+  </Helmet>
 );
 
 const HomePage = () => (
