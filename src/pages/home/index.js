@@ -10,10 +10,10 @@ import './style.scss';
 const JSONLD = () => (
   <>
     <script type="application/ld+json">
-      { JSON.stringify(
+      { `
         {
           "@context": "http://schema.org",
-          "@type": "Company",
+          "@type": "Organization",
           "legalName": "ViewSource",
           "url": "https://viewsource.pl",
           "logo": "https://viewsource.pl/icons/icon-512x512.png",
@@ -23,18 +23,18 @@ const JSONLD = () => (
             "https://www.instagram.com/view.source/"
           ]
         }
-      )}
+      ` }
     </script>
 
     <script type="application/ld+json">
-      { JSON.stringify(
+      { `
         {
           "@context": "http://schema.org",
           "@type": "WebSite",
           "name": "ViewSource.pl",
           "url": "https://viewsource.pl"
         }
-      ) }
+       ` }
     </script>
   </>
 );
