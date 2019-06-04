@@ -21,8 +21,8 @@ module.exports = {
         name: `View Source`,
         short_name: `ViewSource`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#7a5add`,
+        theme_color: `#7a5add`,
         display: `minimal-ui`,
         icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
       },
